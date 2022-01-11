@@ -2,7 +2,7 @@ import React from "react";
 import { useCharacters } from "../hooks/useCharacters";
 import "./CharacterList.css";
 
-export default function CharactersList() {
+export const CharactersList = () => {
   const { error, loading, data } = useCharacters();
   if (loading) return <div>Spinner...</div>;
 
@@ -20,4 +20,6 @@ export default function CharactersList() {
       })}
     </div>
   );
-}
+};
+
+export default CharactersList;
